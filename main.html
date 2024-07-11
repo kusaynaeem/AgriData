@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- import bootstrap -->
+		<link rel="stylesheet"
+        type="text/css"
+        href="bootstrap.css"
+        />
+
+  <!-- import our own stylesheet -->
+  <link rel="stylesheet"
+        type="text/css"
+        href="styles.css"
+        />	
+    
+    <!-- import jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="search" name="search" placeholder="إدخال المدينة...">
+        <button type="button" onclick="searchFunction()">بحث</button>
+    </div>
+
+    <div class="center ">
+        <img src="map.JPG"
+        class="crop-img backgroud-white">
+   </div>
+   
+
+    <script>
+        function searchFunction() {
+            var query = document.getElementById('search').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            } else {
+                alert('الرجاء إدخال المدينة.');
+            }
+        }
+    </script>
+    
+</body>
+</html>
